@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss ./style.scss   ./style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  }
+}
