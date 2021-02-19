@@ -1,0 +1,13 @@
+@mixin font-logo-title{
+    font-family: 'Shrikhand', cursive;
+}
+@mixin font-text {
+    font-family: 'Roboto', sans-serif;
+}
+@mixin list {
+    display: flex;
+}
+@mixin link {
+    text-decoration: none;
+    color: $color-font;
+}
