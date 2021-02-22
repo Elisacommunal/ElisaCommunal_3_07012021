@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.header{
+    padding : 20px 0;
+    height: 30px;
+    box-shadow: 0px 4px 6px 2px #6F6F6F;
+    z-index: 1;
+    &__img{
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        .arrow{
+           padding: 10px;
+        }
+
+    }
+}
+.img{
+    &__menu{
+        @include img($height-img-menu);
+    }
+    &__index{
+        @include img($height-img-index)
+    }
+}
+
+.link{
+    @include link($color-font);
+    &__footer{
+        @include link($color-footer)
+    }
+}
+footer{
+    background-color: $color-bg-footer;
+    color: $color-footer;
+}

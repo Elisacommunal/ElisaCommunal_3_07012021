@@ -7,7 +7,12 @@
 @mixin list {
     display: flex;
 }
-@mixin link {
+@mixin link($color) {
     text-decoration: none;
-    color: $color-font;
+    color: $color;
+}
+@mixin img ($img-size) {
+    width: 100%;
+    height: $img-size;
+    object-fit: cover;
 }

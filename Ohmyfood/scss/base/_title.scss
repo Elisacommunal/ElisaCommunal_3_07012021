@@ -1,0 +1,8 @@
+h1{
+    @include font-text();
+    font-size: $size-h1;
+}
+h2{
+    @include font-text();
+    font-size: $size-h2
+}
