@@ -1,23 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
-}
-
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-}
-
 body {
   margin: 0;
+}
+
+.main-menu {
+  background-color: #f6f6f6;
 }
 
 .header {
   padding: 20px 0;
   height: 30px;
-  box-shadow: 0px 4px 6px 2px #6F6F6F;
 }
 .header__img {
   width: 200px;
@@ -37,15 +30,15 @@ body {
 
 .img__menu {
   width: 100%;
-  border-radius: 25px 25px 0 0;
   height: 300px;
   object-fit: cover;
+  position: relative;
 }
 .img__index {
   width: 100%;
-  border-radius: 25px 25px 0 0;
   height: 250px;
   object-fit: cover;
+  border-radius: 25px 25px 0 0;
 }
 
 .link {
@@ -95,6 +88,70 @@ body {
   color: transparent;
 }
 
+.card {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  padding: 5px 10px 45px 10px;
+  position: relative;
+  z-index: 1;
+  top: -75px;
+}
+.card__title {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 15px;
+  font-size: 20px;
+}
+.card i:hover {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(top, #9356DC 25%, #FF79DA 75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.card h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  border-bottom: solid 3px #99E2D0;
+  width: 50px;
+  margin-left: 12px;
+  line-height: 35px;
+}
+.cardh3 {
+  font-size: 16px;
+}
+.card article {
+  box-shadow: 0px 5px 5px 3px #eaeaea;
+  background-color: #fff;
+  line-height: 1px;
+  border-radius: 25px;
+  padding: 5px 20px;
+  margin: 30px 5px;
+}
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.card__price--long {
+  font-size: 12px;
+}
+.card button {
+  box-shadow: 0px 5px 9px 3px gray;
+  height: 55px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #fff;
+}
+
 footer {
   font-family: "Roboto", sans-serif;
   background-color: #353535;
@@ -118,6 +175,10 @@ footer a i {
 }
 footer p {
   margin: 0;
+}
+
+.strong {
+  font-weight: 600;
 }
 
 .index {
