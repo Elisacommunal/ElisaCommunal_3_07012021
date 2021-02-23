@@ -5,18 +5,20 @@ body{
     padding : 20px 0;
     height: 30px;
     box-shadow: 0px 4px 6px 2px #6F6F6F;
-    z-index: 1;
     &__img{
-        width: 50%;
-        position: absolute;
-        left: 25%;
-        
+        width: 200px;
+        display: block;
+        margin: auto;
+
     }
     &__menu{
         display: flex;
         align-items: center;
         .arrow{
            padding: 10px;
+           position:absolute;
+           left: 5px;
+           top: 17px
         }
 
     }
@@ -36,7 +38,57 @@ body{
         @include link($color-footer)
     }
 }
+.restaurant{
+    padding : 20px;
+    background-color: $color-bg-index;
+    &__box{
+        @include box($color-form);
+        align-content: center;
+        border-radius: 25px ;
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+    &__text{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2px 15px;
+        line-height: 8px;
+    }
+    & i{
+        font-size: 22px;
+        padding-right : 10px;
+        &:hover{
+            @include heart
+        }
+        &:active{
+            @include heart;
+        }
+    }
+}
+
 footer{
+    @include font-text;
     background-color: $color-bg-footer;
     color: $color-footer;
+    padding: 10px 30px;
+    line-height: 30px;
+    & h3{
+        @include font-logo-title;
+        font-weight: 350;
+        padding: 20px 5px;
+        margin: 0;
+    }
+    & a {
+        @include list;
+        align-items: center;
+        & i{
+            padding-right: 20px;
+            width: 12px;
+        }
+    }
+    & p{
+        margin: 0;
+    }
 }
