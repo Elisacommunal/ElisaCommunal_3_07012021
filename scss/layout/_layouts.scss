@@ -123,6 +123,9 @@ body{
     }
     & button{
         @include button;
+        &:hover{
+            @include button-hover;
+        }
     }
     
 }
@@ -135,7 +138,7 @@ footer{
     line-height: 30px;
     & h3{
         @include font-logo-title;
-        font-weight: 350;
+        font-weight: 300;
         padding: 20px 5px;
         margin: 0;
     }
