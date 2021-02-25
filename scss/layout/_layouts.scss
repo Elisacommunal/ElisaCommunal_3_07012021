@@ -46,6 +46,7 @@ body{
 .restaurant{
     padding : 20px;
     background-color: $color-bg-index;
+    
     &__box{
         @include box($color-form);
         align-content: center;
@@ -53,6 +54,10 @@ body{
         width: 100%;
         padding: 0;
         margin: 20px 0;
+        position: relative;
+        &__new{
+            @include new;
+        }
     }
     &__text{
         display: flex;

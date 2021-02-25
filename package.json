@@ -4,7 +4,9 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "sass" : "sass --watch ./scss/style.scss:./css/style.css"
+    "sass" : "sass --watch ./scss/style.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
     
-  }
+  },
+  "browserslist": "last 4 versions"
 }

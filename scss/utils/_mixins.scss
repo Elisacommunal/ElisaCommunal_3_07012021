@@ -47,3 +47,13 @@
     background: linear-gradient(to bottom right, lighten($color-secondary, 5%), lighten($color-primary, 5%));
 
 }
+@mixin new {
+    position: absolute;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 30%);
+    padding: 6px 12px ;
+    right: 15px;
+    top: 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
