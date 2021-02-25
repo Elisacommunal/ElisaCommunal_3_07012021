@@ -22,7 +22,6 @@
     & i{
         padding-right: 2px
     }
-
 }
 .reservation{
     @include font-text;
@@ -48,12 +47,20 @@
     }
 }
 .funct{
-    margin: 1em,
+    margin: 1em;
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
 }
 .list{
     @include list(); 
     align-items: center;
-    .list__text{
+    width: 100%;
+    max-width: 500px;
+    &__text{
         @include box($color-form);
         width: 100%;
         background-color: $color-bg-index;
@@ -62,7 +69,7 @@
         align-items: center;
         height: 60px;
         border-radius: 20px;
-        p{
+        & p{
             padding: 0 20px;
         }
         &:hover{
