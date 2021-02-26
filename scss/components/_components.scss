@@ -48,6 +48,11 @@
 }
 .funct{
     margin: 1em;
+    & h2{
+        @media (min-width:760px) {
+           text-align: center;
+        }
+    }
     &__box{
         display: flex;
         flex-direction: column;

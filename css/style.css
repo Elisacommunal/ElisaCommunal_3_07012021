@@ -6,6 +6,21 @@ body {
 
 .main-menu {
   background-color: #f6f6f6;
+  width: 100%;
+}
+@media (min-width: 760px) {
+  .main-menu {
+    margin: auto;
+    width: 75%;
+    min-width: 760px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-menu {
+    margin: auto;
+    width: 75%;
+    max-width: 1024px;
+  }
 }
 
 .header {
@@ -17,15 +32,41 @@ body {
   display: block;
   margin: auto;
 }
+.header__reception {
+  display: none;
+}
+@media (min-width: 760px) {
+  .header__reception {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-weight: 300;
+    border-bottom: solid 3px #99E2D0;
+    width: 50px;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+  .header__reception:hover {
+    color: #9356DC;
+  }
+}
 .header__menu {
   display: flex;
   align-items: center;
+  box-shadow: 0px 5px 5px 3px #eaeaea;
 }
 .header__menu .arrow {
   padding: 10px;
   position: absolute;
   left: 5px;
   top: 17px;
+}
+@media (min-width: 760px) {
+  .header__menu .arrow {
+    display: none;
+  }
 }
 
 .img__menu {
@@ -53,6 +94,11 @@ body {
 .restaurant {
   padding: 20px 20px 60px 20px;
   background-color: #f6f6f6;
+}
+@media (min-width: 760px) {
+  .restaurant h2 {
+    text-align: center;
+  }
 }
 .restaurant__bloc {
   display: flex;
@@ -163,6 +209,7 @@ body {
 }
 .card button {
   box-shadow: 0px 5px 9px 3px gray;
+  width: 200px;
   height: 55px;
   padding: 10px;
   border-radius: 25px;
@@ -253,6 +300,7 @@ footer p {
 }
 .reservation button {
   box-shadow: 0px 5px 9px 3px gray;
+  width: 200px;
   height: 55px;
   padding: 10px;
   border-radius: 25px;
@@ -270,6 +318,11 @@ footer p {
 
 .funct {
   margin: 1em;
+}
+@media (min-width: 760px) {
+  .funct h2 {
+    text-align: center;
+  }
 }
 .funct__box {
   display: flex;
