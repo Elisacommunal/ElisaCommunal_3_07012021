@@ -59,10 +59,22 @@ body{
     &__menu{
         @include img($height-img-menu);
         position: relative;  
+        object-position: 50% 50%;
+        @media (min-width : 426px) {
+            height: 500px;
+            object-position: 50% 50%;
+        }
     }
     &__index{
         @include img($height-img-index);
         border-radius: 25px 25px 0 0 ;
+        object-position: 100% 100%;
+    }
+    &__index2{
+        @include img($height-img-index);
+        border-radius: 25px 25px 0 0 ;
+        object-position: 100% 60%;
+        
     }
 }
 .link{
@@ -72,7 +84,7 @@ body{
     }
 }
 .restaurant{
-    padding : 20px 20px 60px 20px;
+    padding : 20px 10px 60px 10px;
     background-color: $color-bg-index;
     & h2{
         @media (min-width:760px) {
@@ -133,7 +145,8 @@ body{
         align-items: center;
         justify-content: space-between;
         padding: 2px 15px;
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: 400;
     }
     & i:hover {
         @include heart;

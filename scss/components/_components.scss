@@ -57,14 +57,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%
+        width: 100%;
+        @media (min-width:760px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+         }
     }
 }
 .list{
     @include list(); 
     align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     &__text{
         @include box($color-form);
         width: 100%;
