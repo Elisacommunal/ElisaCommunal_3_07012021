@@ -57,3 +57,6 @@
     font-size: 14px;
     font-weight: bold;
 }
+@mixin num-meal ($meal) {
+    $num-meal :$meal;
+}

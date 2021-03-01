@@ -41,6 +41,7 @@
     }
     & button{
         @include button;
+        transition: 1s;
         &:hover{
             @include button-hover;
         }

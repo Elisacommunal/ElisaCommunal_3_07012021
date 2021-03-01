@@ -154,6 +154,8 @@ body {
 .restaurant i {
   font-size: 22px;
   padding-right: 10px;
+  opacity: 0.6;
+  transition: opacity 1500ms;
 }
 .restaurant i:hover {
   font-weight: bolder;
@@ -161,13 +163,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-}
-.restaurant i:active {
-  font-weight: bolder;
-  background: -webkit-linear-gradient(top, #9356DC 25%, #FF79DA 75%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  opacity: 1;
 }
 
 .card {
@@ -179,6 +175,62 @@ body {
   z-index: 1;
   top: -75px;
 }
+.card__meal {
+  box-shadow: 0px 5px 5px 3px #eaeaea;
+  background-color: #fff;
+  line-height: 1px;
+  border-radius: 25px;
+  padding: 5px 20px;
+  margin: 30px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: anim-menu 2200ms both;
+}
+.card__meal--1 {
+  animation-delay: 220ms;
+}
+.card__meal--2 {
+  animation-delay: 440ms;
+}
+.card__meal--3 {
+  animation-delay: 660ms;
+}
+.card__meal--4 {
+  animation-delay: 880ms;
+}
+.card__meal--5 {
+  animation-delay: 1100ms;
+}
+.card__meal--6 {
+  animation-delay: 1320ms;
+}
+.card__meal--7 {
+  animation-delay: 1540ms;
+}
+.card__meal--8 {
+  animation-delay: 1760ms;
+}
+.card__meal--9 {
+  animation-delay: 1980ms;
+}
+.card__meal--10 {
+  animation-delay: 2200ms;
+}
+.card__meal:hover .card__check {
+  display: block;
+  opacity: 1;
+  width: 10%;
+  padding: 25px;
+  color: #fff;
+  background-color: #99E2D0;
+  animation: checkbox 3000ms;
+}
+.card__check {
+  opacity: 0;
+  text-align: center;
+  align-items: center;
+}
 .card__title {
   font-family: "Shrikhand", cursive;
   display: flex;
@@ -188,12 +240,23 @@ body {
   font-size: 18px;
   font-weight: 400;
 }
-.card i:hover {
+.card__heart {
+  font-size: 22px;
+  padding-right: 5px;
+  opacity: 0.6;
+  transition: opacity 1500ms;
+}
+.card__heart:hover {
   font-weight: bolder;
   background: -webkit-linear-gradient(top, #9356DC 25%, #FF79DA 75%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  opacity: 1;
+}
+.card__inbox {
+  justify-content: space-between;
+  width: 100%;
 }
 .card h2 {
   font-family: "Roboto", sans-serif;
@@ -206,14 +269,6 @@ body {
 }
 .cardh3 {
   font-size: 16px;
-}
-.card article {
-  box-shadow: 0px 5px 5px 3px #eaeaea;
-  background-color: #fff;
-  line-height: 1px;
-  border-radius: 25px;
-  padding: 5px 20px;
-  margin: 30px 5px;
 }
 .card__price {
   display: flex;
@@ -326,6 +381,7 @@ footer p {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #fff;
   cursor: pointer;
+  transition: 1s;
 }
 .reservation button:hover {
   box-shadow: 0px 5px 5px 3px #797878;
@@ -390,6 +446,27 @@ footer p {
   width: 20px;
   height: 20px;
   border-radius: 25px;
+}
+
+@keyframes anim-menu {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes checkbox {
+  from {
+    transform: translateX(130px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

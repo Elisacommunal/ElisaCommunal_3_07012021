@@ -123,11 +123,11 @@ body{
     & i{
         font-size: 22px;
         padding-right : 10px;
+        opacity: 0.6;
+        transition: opacity 1500ms;
         &:hover{
-            @include heart
-        }
-        &:active{
             @include heart;
+            opacity: 1;
         }
     }
 }
@@ -139,6 +139,37 @@ body{
     position: relative;
     z-index: 1;
     top: -75px;
+    &__meal{
+        @include box($color-form);
+        background-color: $color-footer;
+        line-height: 1px;
+        border-radius: 25px;
+        padding: 5px 20px;
+        margin: 30px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        animation: anim-menu $anim-dur both;
+        @for $x from 1 through $num-meal {
+            &--#{$x} {
+                animation-delay: $anim-delay*$x;
+            }
+        }
+        &:hover .card__check{
+            display: block;
+            opacity: 1;
+            width: 10%;
+            padding: 25px;
+            color: $color-footer;
+            background-color: $color-tertiary; 
+            animation: checkbox 3000ms;
+        }
+    }
+        &__check{
+        opacity: 0;
+        text-align: center;
+        align-items: center;
+    }
     &__title{
         @include font-logo-title;
         @include list;
@@ -148,8 +179,19 @@ body{
         font-size: 18px;
         font-weight: 400;
     }
-    & i:hover {
-        @include heart;
+    &__heart{
+        font-size: 22px;
+        padding-right: 5px;
+        opacity: 0.6;
+        transition: opacity 1500ms;
+        &:hover{
+            @include heart;
+            opacity: 1;
+        }
+    }
+    &__inbox{
+        justify-content: space-between;
+        width: 100%;
     }
     & h2{
         @include font-text;
@@ -162,15 +204,7 @@ body{
     }
     &h3{
         font-size: 16px;
-    }
-    & article{
-        @include box($color-form);
-        background-color: $color-footer;
-        line-height: 1px;
-        border-radius: 25px;
-        padding: 5px 20px;
-        margin: 30px 5px;
-    }
+    } 
     &__price{
         @include list;
         justify-content: space-between;
