@@ -10,11 +10,27 @@
 }
 @keyframes checkbox{
     from{
-        transform: translateX(130px);
+        transform: scaleX(0);
         opacity: 0;
     }
     to{
-        transform: translateX(0);
+        transform: scaleX(1);
         opacity: 1;
+    }
+}
+@keyframes checkbox-2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-20px);
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(1turn);
     }
 }

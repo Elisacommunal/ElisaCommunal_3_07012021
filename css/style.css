@@ -179,12 +179,14 @@ body {
   box-shadow: 0px 5px 5px 3px #eaeaea;
   background-color: #fff;
   line-height: 1px;
+  height: 70px;
   border-radius: 25px;
   padding: 5px 20px;
   margin: 30px 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   animation: anim-menu 2200ms both;
 }
 .card__meal--1 {
@@ -217,19 +219,51 @@ body {
 .card__meal--10 {
   animation-delay: 2200ms;
 }
-.card__meal:hover .card__check {
-  display: block;
-  opacity: 1;
-  width: 10%;
-  padding: 25px;
-  color: #fff;
+.card__meal:hover .card__inbox {
+  width: 70%;
+  min-width: 0;
+  transition: all 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card__meal:hover .card__box-check {
+  width: 60%;
   background-color: #99E2D0;
-  animation: checkbox 3000ms;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  /*
+              display: block;
+              opacity: 1;
+              width: 10%;
+              padding: 0px;
+              margin: -20px;
+              line-height: 77px;  
+              border-radius: 0 25px 25px 0;
+              background-color: $color-tertiary; 
+              transform-origin: right;  
+              animation: checkbox 1000ms;    
+  */
+}
+.card__meal:hover .card__check {
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  animation: rotate 1000ms forwards;
+}
+.card__meal:hover .strong {
+  width: 40%;
+  transition: all 0.5s ease-in-out;
+}
+.card__meal:hover .card__price {
+  width: 30%;
+  min-width: 150px;
+  transition: all 0.5s ease-in-out;
 }
 .card__check {
-  opacity: 0;
-  text-align: center;
   align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 .card__title {
   font-family: "Shrikhand", cursive;
@@ -255,8 +289,17 @@ body {
   opacity: 1;
 }
 .card__inbox {
-  justify-content: space-between;
-  width: 100%;
+  width: 80%;
+  transition: all 0.5s ease-in-out;
+  height: 50px;
+  padding: -15px;
+}
+.card__inbox p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 20px;
 }
 .card h2 {
   font-family: "Roboto", sans-serif;
@@ -267,16 +310,47 @@ body {
   margin-left: 12px;
   line-height: 35px;
 }
-.cardh3 {
+.card h3 {
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 3px 0;
+  line-height: 20px;
 }
 .card__price {
   display: flex;
-  justify-content: space-between;
-  font-size: 14px;
+  align-items: center;
+  width: 20%;
+  min-width: 90px;
+  justify-content: center;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  height: 80px;
+  margin: -20px;
 }
-.card__price--long {
-  font-size: 12px;
+.card__price .card__box-check {
+  display: flex;
+  opacity: 0;
+  width: 0;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  transition: all 0.5s ease-in-out;
+  transform-origin: right;
+}
+.card__price .strong {
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 65px 30px 0 0;
+  transition: all 0.5s ease-in-out;
+  height: 50px;
+  padding: -15px;
 }
 .card button {
   box-shadow: 0px 5px 9px 3px gray;
@@ -319,10 +393,6 @@ footer a i {
 }
 footer p {
   margin: 0;
-}
-
-.strong {
-  font-weight: 600;
 }
 
 .index {
@@ -460,12 +530,28 @@ footer p {
 }
 @keyframes checkbox {
   from {
-    transform: translateX(130px);
+    transform: scaleX(0);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: scaleX(1);
     opacity: 1;
+  }
+}
+@keyframes checkbox-2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
 
