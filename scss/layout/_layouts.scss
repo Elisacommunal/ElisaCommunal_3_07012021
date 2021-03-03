@@ -3,6 +3,7 @@ body{
     padding: 0;
     width: auto;
     max-width: 99.9%;
+    position: relative;
 }
 .main-menu{
     background-color: $color-bg-index;
@@ -89,6 +90,8 @@ body{
 .restaurant{
     padding : 20px 10px 60px 10px;
     background-color: $color-bg-index;
+    scale: 1;
+    
     & h2{
         @media (min-width:760px) {
             text-align: center;
@@ -98,6 +101,7 @@ body{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+       
         & a{
             width: 100%;
             max-width: 350px;
@@ -112,6 +116,11 @@ body{
         padding: 0;
         margin: 20px 0;
         position: relative;
+        scale: 1;
+        transition: transform 1s;
+        &:hover{
+            transform: scale(1.05); 
+        }
         &__new{
             @include new;
         }
@@ -203,8 +212,7 @@ body{
         padding: 2px 15px;
         font-size: 18px;
         font-weight: 400;
-    }
-    &__heart{
+        & i{
         align-items: center;
         font-size: 25px;
         padding-right: 5px;
@@ -214,7 +222,14 @@ body{
             @include heart;
             opacity: 1;
         }
+        &:focus{
+            @include heart;
+            opacity: 1;
+        }
     }
+
+ }
+    
     &__inbox{
         width: 80%;
         transition: all 0.5s ease-in-out;
@@ -281,8 +296,11 @@ body{
     }
     & button{
         @include button;
+        scale: 1;
+        transition : transform 300ms;
         &:hover{
             @include button-hover;
+            transform: scale(1.05)
         }
     }
 }

@@ -5,6 +5,7 @@ body {
   padding: 0;
   width: auto;
   max-width: 99.9%;
+  position: relative;
 }
 
 .main-menu {
@@ -112,6 +113,7 @@ body {
 .restaurant {
   padding: 20px 10px 60px 10px;
   background-color: #f6f6f6;
+  scale: 1;
 }
 @media (min-width: 760px) {
   .restaurant h2 {
@@ -136,6 +138,11 @@ body {
   padding: 0;
   margin: 20px 0;
   position: relative;
+  scale: 1;
+  transition: transform 1s;
+}
+.restaurant__box:hover {
+  transform: scale(1.05);
 }
 .restaurant__box__new {
   position: absolute;
@@ -265,14 +272,22 @@ body {
   font-size: 18px;
   font-weight: 400;
 }
-.card__heart {
+.card__title i {
   align-items: center;
   font-size: 25px;
   padding-right: 5px;
   opacity: 0.6;
   transition: opacity 1500ms;
 }
-.card__heart:hover {
+.card__title i:hover {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(top, #9356DC 25%, #FF79DA 75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+}
+.card__title i:focus {
   font-weight: bolder;
   background: -webkit-linear-gradient(top, #9356DC 25%, #FF79DA 75%);
   background-clip: text;
@@ -356,10 +371,13 @@ body {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #fff;
   cursor: pointer;
+  scale: 1;
+  transition: transform 300ms;
 }
 .card button:hover {
   box-shadow: 0px 5px 5px 3px #797878;
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  transform: scale(1.05);
 }
 
 footer {
@@ -443,11 +461,13 @@ footer p {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #fff;
   cursor: pointer;
-  transition: 1s;
+  scale: 1;
+  transition: transform 300ms;
 }
 .reservation button:hover {
   box-shadow: 0px 5px 5px 3px #797878;
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  transform: scale(1.05);
 }
 
 .funct {
@@ -513,13 +533,13 @@ footer p {
 .loading {
   width: 100%;
   height: 100%;
-  animation: getout 1s 1s ease-in-out forwards;
+  animation: out 1s 1s ease-in-out forwards;
   background-color: #353535;
   position: absolute;
   z-index: 10;
 }
 .loading__border {
-  top: 45%;
+  top: 12%;
   left: 48%;
   display: flex;
   justify-content: center;
@@ -533,7 +553,7 @@ footer p {
 }
 @media (max-width: 480px) {
   .loading__border {
-    left: 30%;
+    left: 30% !important;
   }
 }
 @media (max-width: 768px) {
@@ -542,7 +562,7 @@ footer p {
   }
 }
 .loading__border2 {
-  top: 40%;
+  top: 15%;
   left: 43%;
   display: flex;
   justify-content: center;
@@ -556,7 +576,7 @@ footer p {
 }
 @media (max-width: 480px) {
   .loading__border2 {
-    left: 30%;
+    left: 27% !important;
     width: 151px;
     height: 151px;
   }
@@ -567,7 +587,7 @@ footer p {
   }
 }
 .loading__border3 {
-  top: 40%;
+  top: 15%;
   left: 42%;
   display: flex;
   justify-content: center;
@@ -581,7 +601,7 @@ footer p {
 }
 @media (max-width: 480px) {
   .loading__border3 {
-    left: 45%;
+    left: 45% !important;
   }
 }
 @media (max-width: 768px) {
@@ -626,7 +646,7 @@ footer p {
     transform: rotate(1turn);
   }
 }
-@keyframes getout {
+@keyframes out {
   0% {
     transform: scale(1);
     opacity: 1;
@@ -636,7 +656,7 @@ footer p {
     opacity: 0;
   }
   100% {
-    transform: translate(-99999px);
+    z-index: -3;
     opacity: 0;
   }
 }
