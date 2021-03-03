@@ -225,6 +225,7 @@ body{
         &:focus{
             @include heart;
             opacity: 1;
+            outline: none;
         }
     }
 

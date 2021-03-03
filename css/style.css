@@ -294,6 +294,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 1;
+  outline: none;
 }
 .card__inbox {
   width: 80%;
