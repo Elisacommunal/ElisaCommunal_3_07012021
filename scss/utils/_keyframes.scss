@@ -34,3 +34,17 @@
         transform: rotate(1turn);
     }
 }
+@keyframes getout{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(3);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-99999px);
+        opacity: 0;
+    }
+}
