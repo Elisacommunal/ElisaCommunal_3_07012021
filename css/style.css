@@ -174,7 +174,7 @@ body {
 .restaurant {
   padding: 20px 10px 60px 10px;
   background-color: #f6f6f6;
-  scale: 1;
+  transform: scale(1);
 }
 @media (min-width: 760px) {
   .restaurant h2 {
@@ -199,7 +199,7 @@ body {
   padding: 0;
   margin: 20px 0;
   position: relative;
-  scale: 1;
+  transform: scale(1);
   transition: transform 1s;
 }
 .restaurant__box:hover {
@@ -429,7 +429,7 @@ footer p {
   color: #fff;
   outline: none;
   cursor: pointer;
-  scale: 1;
+  transform: scale(1);
   transition: transform 300ms;
 }
 .reservation button:hover {
@@ -656,7 +656,7 @@ footer p {
   color: #fff;
   outline: none;
   cursor: pointer;
-  scale: 1;
+  transform: scale(1);
   transition: transform 300ms;
 }
 .card button:hover {

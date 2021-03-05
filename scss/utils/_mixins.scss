@@ -46,7 +46,6 @@
 @mixin button-hover {
     @include box($color-button-hover);
     background: linear-gradient(to bottom right, lighten($color-secondary, 5%), lighten($color-primary, 5%));
-
 }
 @mixin new {
     position: absolute;

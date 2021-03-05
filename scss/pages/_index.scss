@@ -98,7 +98,7 @@
     }
     & button{
         @include button;
-        scale: 1;
+        transform: scale(1);
         transition: transform 300ms;
         &:hover{
             @include button-hover;

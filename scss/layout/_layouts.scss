@@ -124,13 +124,13 @@ body{
 .link{
     @include link($color-font);
     &__footer{
-        @include link($color-footer)
+        @include link($color-footer);
     }
 }
 .restaurant{
     padding : 20px 10px 60px 10px;
     background-color: $color-bg-index;
-    scale: 1;
+    transform: scale(1);
     & h2{
         @media (min-width:760px) {
             text-align: center;
@@ -155,7 +155,7 @@ body{
         padding: 0;
         margin: 20px 0;
         position: relative;
-        scale: 1;
+        transform: scale(1);
         transition: transform 1s;
         &:hover{
             transform: scale(1.05); 
