@@ -40,6 +40,7 @@
         margin:auto; 
         background: linear-gradient(to bottom right, $color-secondary, $color-primary);
         color: $color-footer;
+        outline: none;
         cursor: pointer;
 }
 @mixin button-hover {
