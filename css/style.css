@@ -402,7 +402,7 @@ footer p {
 .reservation {
   font-family: "Roboto", sans-serif;
   background-color: #f6f6f6;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 }
 .reservation h1 {
   text-align: center;
@@ -416,15 +416,19 @@ footer p {
   font-weight: 200;
   padding-bottom: 10px;
 }
-.reservation button {
+.reservation .button {
   box-shadow: 0px 5px 9px 3px gray;
   width: 200px;
-  height: 55px;
+  height: 35px;
   padding: 10px;
   border-radius: 25px;
   border: none;
-  display: block;
-  margin: auto;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #fff;
   outline: none;
@@ -432,7 +436,7 @@ footer p {
   transform: scale(1);
   transition: transform 300ms;
 }
-.reservation button:hover {
+.reservation .button:hover {
   box-shadow: 0px 5px 5px 3px #797878;
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   transform: scale(1.05);
@@ -482,33 +486,36 @@ footer p {
   animation: anim-menu 3500ms both;
 }
 .card__meal--1 {
-  animation-delay: 560ms;
+  animation-delay: 509.0909090909ms;
 }
 .card__meal--2 {
-  animation-delay: 1120ms;
+  animation-delay: 1018.1818181818ms;
 }
 .card__meal--3 {
-  animation-delay: 1680ms;
+  animation-delay: 1527.2727272727ms;
 }
 .card__meal--4 {
-  animation-delay: 2240ms;
+  animation-delay: 2036.3636363636ms;
 }
 .card__meal--5 {
-  animation-delay: 2800ms;
+  animation-delay: 2545.4545454545ms;
 }
 .card__meal--6 {
-  animation-delay: 3360ms;
+  animation-delay: 3054.5454545455ms;
 }
 .card__meal--7 {
-  animation-delay: 3920ms;
+  animation-delay: 3563.6363636364ms;
 }
 .card__meal--8 {
-  animation-delay: 4480ms;
+  animation-delay: 4072.7272727273ms;
 }
 .card__meal--9 {
-  animation-delay: 5040ms;
+  animation-delay: 4581.8181818182ms;
 }
 .card__meal--10 {
+  animation-delay: 5090.9090909091ms;
+}
+.card__meal--11 {
   animation-delay: 5600ms;
 }
 .card__meal:hover .card__inbox {
