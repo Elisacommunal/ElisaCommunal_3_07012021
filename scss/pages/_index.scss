@@ -49,6 +49,9 @@
     align-items: center;
     width: 100%;
     max-width: 400px;
+    @media (min-width : 832px) {
+        margin: 10px;
+    }
     &__text{
         @include box($color-form);
         width: 100%;
